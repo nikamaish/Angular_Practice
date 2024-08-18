@@ -1,0 +1,22 @@
+ng new project-name
+ng add
+ng serve
+
+angular.json -> configuring your styles, js or for pipeline deployments
+
+package.json -> scripts, installed dependecies, can change manually but not package.lock.json
+
+tsconfig.app.json -> tells you the typescript configuration for your projects
+
+
+angular is spa means only one html file i.e index.html
+
+
+main.ts -> entry point to your project, which is the first component to be render
+
+main.ts will compile AppComponent and from that root component will compile, it is present in index.html
+
+
+app.component.spec.ts 
+-> jasmine - writing  the unit tests
+-> karma - test runner

@@ -1,0 +1,58 @@
+/* General Styles */
+form {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #0004ff;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .form-label,
+    .form-control,
+    .btn {
+      font-size: 0.875rem;
+    }
+  
+    .form-control {
+      padding: 0.25rem 0.5rem;
+    }
+  
+    .btn {
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .form-control {
+      font-size: 0.75rem;
+    }
+  
+    .btn {
+      padding: 0.25rem;
+      font-size: 0.75rem;
+    }
+  
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+  
+    li {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    button {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  
