@@ -15,6 +15,10 @@ export class AppComponent {
   users: User[] = [];
   currentUser: User = { id: 0, name: '', email: '' };
   isEditMode = false;
+  showUsers = false; // Controls the visibility of the user list
+
+
+  
 
   addUser() {
     if (this.isEditMode) {
@@ -24,6 +28,9 @@ export class AppComponent {
       this.users.push(this.currentUser);
       this.currentUser = { id: 0, name: '', email: '' };
     }
+  }
+  toggleShowUsers() {
+    this.showUsers = !this.showUsers;
   }
 
   editUser(user: User) {

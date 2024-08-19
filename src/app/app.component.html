@@ -1,6 +1,5 @@
+<h2>CRUD Operation</h2>
 <form (ngSubmit)="addUser()" #userForm="ngForm">
-  <!-- This creates a local variable userForm which is an instance of Angular's NgForm. This allows to access form controls and their states within the template. -->
-
   <div class="mb-3">
     <label for="name" class="form-label">Name:</label>
     <input type="text" id="name" class="form-control" [(ngModel)]="currentUser.name" name="name" required>
@@ -12,13 +11,17 @@
   </div>
 
   <button type="submit" class="btn btn-primary btn-lg" [disabled]="userForm.invalid">{{ isEditMode ? 'Update' : 'Add' }}</button>
+  
 </form>
 
-
-
+<!-- Show All Users Button -->
 <div class="container mt-4">
-  <h2 class="text-center mb-4">All Users</h2>
-  <ul class="list-group">
+  <button class="btn btn-secondary mb-3" (click)="toggleShowUsers()">
+    {{ showUsers ? 'Hide All Users' : 'Show All Users' }}
+  </button>
+
+  <h2 class="text-center mb-4" *ngIf="showUsers">All Users</h2>
+  <ul class="list-group" *ngIf="showUsers">
     <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let user of users">
       {{ user.name }} - {{ user.email }}
       <div>
@@ -28,7 +31,3 @@
     </li>
   </ul>
 </div>
-
-
-
-<!-- *ngFor is ideal for rendering a dynamic list of items. For example, if you have an array of users, you can use *ngFor to create a list of HTML elements where each element represents a user. -->
